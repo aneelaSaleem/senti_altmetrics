@@ -22,13 +22,13 @@ Run the following commands to use the container
    Running on http://127.0.0.1:5000/ 
 
 # Usage
-access the API endpoint 
+Access the API endpoint 
  
  http://127.0.0.1:5000/classifyaltmetrics
  
  params: data (JSON array)
 
-Hit the rest api using any http client like *postman*, *curl* or your code written in *java/scala, php, python* etc. 
+Hit the REST API using any http client like *postman*, *curl* or your code written in *java/scala, php, python* etc. 
 
 # Example curl command
 
