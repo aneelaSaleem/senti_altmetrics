@@ -23,7 +23,9 @@ Run the following commands to use the container
 
 # Usage
 access the API endpoint 
+ 
  http://127.0.0.1:5000/classifyaltmetrics
+ 
  params: data (JSON array)
 
 Hit the rest api using any http client like *postman*, *curl* or your code written in *java/scala, php, python* etc. 
