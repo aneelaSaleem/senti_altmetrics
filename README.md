@@ -3,13 +3,15 @@ A basic flask application for sentiment analysis of Altmetrics dataset. An SVM b
 
 # Installation of Docker container (Option 1)
 *Prerequisites*
+
 You must have docker installed and running on your system. (See. https://docs.docker.com/docker-for-mac/install/)
 
 Run the following commands to use the container
-    * pull latest image
+
+      * pull latest image
       docker pull mscs16029/sentialtmetrics
   
-    * run docker image
+      * run docker image
       docker run -d -p 5000:5000 mscs16029/sentialtmetrics:latest
 
 # Installation of flask application (Option 2)
