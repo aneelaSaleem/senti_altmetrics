@@ -11,11 +11,9 @@ nltk.download('stopwords')
 from nltk.corpus import stopwords
 from string import digits
 from flask import Flask, jsonify, request
-from flask_cors import CORS, cross_origin
 import json
 
 app = Flask(__name__)
-CORS(app)
 
 class AltmetricsClassifier(object):
     X = []
@@ -41,7 +39,7 @@ class AltmetricsClassifier(object):
         return cleanedData
 
     def getTrainingAndTestData(self):
-            f=open(r'/Users/aneelasaleem/Documents/ITU/Thesis/ThesisII/all_langs/data/altmetrics_data_cleaned.csv','r', encoding='ISO-8859-1')
+            f=open(r'./altmetrics_data_cleaned.csv','r', encoding='ISO-8859-1')
             reader = csv.reader(f)
             next(reader, None) #skip header
             for row in reader:                
@@ -69,9 +67,7 @@ class AltmetricsClassifier(object):
             return vec_clf
 
     def classify(self, data):
-        print(data)
         text = self.clean(data) #clean the data
-        print(text)
         if os.path.isfile(self.filename):
             # load the model from disk
             vec_clf = pickle.load(open(self.filename, 'rb'))
@@ -95,3 +91,6 @@ def classify_altmetrics():
      predict_me = request.json['data']
      res = AltmetricsClassifier.classify(AltmetricsClassifier, predict_me)
      return json.dumps(res)
+
+if __name__ == '__main__':
+ app.run(port=5000,host='0.0.0.0')
