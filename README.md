@@ -2,14 +2,13 @@
 A basic flask application for sentiment analysis of Altmetrics dataset. An SVM based model is build using sklearn library of python. TfidfVectorizer has been used with BOW features. 
 
 # Installation of Docker container (Option 1)
-   1. pull latest image
-      # docker pull mscs16029/sentialtmetrics
+   *1. pull latest image*
+      docker pull mscs16029/sentialtmetrics
 
-   2. run docker image
+   *2. run docker image*
+      docker run -d -p 5000:5000 mscs16029/sentialtmetrics:latest
 
-      # docker run -d -p 5000:5000 mscs16029/sentialtmetrics:latest
-
-# Installation of flask Application (Option 2)
+# Installation of flask application (Option 2)
     * pip install flask (see how to create Flask app https://flask.palletsprojects.com/en/1.1.x/installation/)
     * export FLASK_APP=sentialtmetrics.py
     * flask run
@@ -18,8 +17,8 @@ A basic flask application for sentiment analysis of Altmetrics dataset. An SVM b
 
 # Usage
 access the API endpoint 
-# http://127.0.0.1:5000/classifyaltmetrics
-# params: data (JSON array)
+ http://127.0.0.1:5000/classifyaltmetrics
+ params: data (JSON array)
 
 Hit the rest api using any http client like *postman*, *curl* or your code written in *java/scala, php, python* etc. 
 
