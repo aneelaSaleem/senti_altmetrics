@@ -40,15 +40,15 @@ Run the following commands to use the container
 # Usage
 Access the API endpoint 
  
- http://127.0.0.1:5000/classifyaltmetrics
+     http://127.0.0.1:5000/classifyaltmetrics
  
- params: data (JSON array)
+     params: data (JSON array)
 
 Hit the REST API using any http client like *postman*, *curl* or your code written in *java/scala, php, python* etc. 
 
 # Example curl command
 
-curl -H "Content-Type: application/json" -X POST -d '{"data": ["sigh When a science acronym is too distracting to even read the science! LOL http://t.co/p2OFAgnuwv @InvaderXan","you raise test scor even iq test practic test skill you lower test scor chang test", "world best acronym", "ild gudgeon gobio gobio french river contaminat microplastic preliminary study first evidence"]}' http://localhost:5000/classifyaltmetrics
+     curl -H "Content-Type: application/json" -X POST -d '{"data": ["sigh When a science acronym is too distracting to even read the science! LOL http://t.co/p2OFAgnuwv @InvaderXan","you raise test scor even iq test practic test skill you lower test scor chang test", "world best acronym", "ild gudgeon gobio gobio french river contaminat microplastic preliminary study first evidence"]}' http://localhost:5000/classifyaltmetrics
  
 # Sample Input
       
